@@ -18,11 +18,13 @@ export class ListComponent {
   // Reforzar esto!
   @Output()
   // public onDelete = new EventEmitter<number>(); ---> Tecnicamente es lo mismo ya que en esta linea Typescript lo esta infiriendo automaticamente
-  public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
-  onDeleteCharacter(index: number): void {
+  onDeleteCharacter(id?: string): void {
     // TODO: Emitir el ID del personaje
-    this.onDelete.emit(index)
+    if (!id) return;
+    console.log({id});
+    this.onDelete.emit(id)
   }
 
 }
