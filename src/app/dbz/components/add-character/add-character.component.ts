@@ -8,6 +8,7 @@ import { Character } from '../../interfaces/character.interface';
 })
 export class AddCharacterComponent {
 
+  // Reforzar esto!
   @Output()
   public onNewCharacter: EventEmitter<Character> = new EventEmitter();
 

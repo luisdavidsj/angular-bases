@@ -4,7 +4,7 @@
 <div class="row">
   <div class="col">
     <!-- characterList es un atributo @input que envia datos del padre al hijo y se hace con llaves cuadradas -->
-    <dbz-list [characterList]="characters"></dbz-list>
+    <dbz-list (onDelete)="onDeleteCharacter($event)" [characterList]="characters"></dbz-list>
   </div>
 
   <div class="col">
