@@ -3,10 +3,16 @@
 
 <div class="row">
   <div class="col">
+    <!-- characterList es un atributo @input que envia datos del padre al hijo y se hace con llaves cuadradas -->
     <dbz-list [characterList]="characters"></dbz-list>
   </div>
 
   <div class="col">
-    <dbz-add-character></dbz-add-character>
+    <!-- Uso de @Output: Cuando queremos escuchar eventos lo hacemnos con parentesis
+    Yo quiero escuchar el evento (lo estamos haciendo mediante un event emitter)
+    cuando mi componente dbz-add-character emita un nuevo personaje,
+    Para recibir el objeto que está emitiendo el hijo se usa síbolo de dolar y event ($event)
+    como parámetro del event emitter -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
   </div>
 </div>
