@@ -21,7 +21,7 @@ export class DbzService {
     id: uuid()
   }];
 
-  onNewCharacter(character: Character): void {
+  addCharacter(character: Character): void {
     /* Estamos utiliando el operador Spread del character (...character) y con esto digo: Toma todas sus propiedades y esparcelas en este nuevo objeto que estoy creando
     Lo que hacemos aqui es mejor que lo de abajo, por que si tuvieramos mas propiedades aqui no habria que cambiar absolutamente nada
 
@@ -40,7 +40,7 @@ export class DbzService {
   //   this.characters.splice(index, 1);
   // }
   deleteCharacterById(id: string){
-    /* Este this.characters.filter va a regresar un nuevo arreglo, con la condicion que tenemos dentro del filter, el; filter barre cada uno de los elementos del arreglo
+    /* Este this.characters.filter va a regresar un nuevo arreglo, con la condicion que tenemos dentro del filter, el filter barre cada uno de los elementos del arreglo
     y va a retornar todos los que esa condicion cumplan true, pero el que sea exactamente al id que tengo al final de la condicion dentro del filter,
     va a ser la condicion que no se cumpla y ese es el elemento que va a filtrar basicamente, y el nuevo arreglo de character va a incluir todos, menos el
     que coincida con ese id */
