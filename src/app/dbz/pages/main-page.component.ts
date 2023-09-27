@@ -9,7 +9,7 @@ import { Character } from '../interfaces/character.interface';
 
 export class MainPageComponent {
   // Concepto de inyección de dependencias
-  constructor(public dbzService: DbzService){}
+  constructor(private dbzService: DbzService){}
 
   get characters(): Character[]{
     return [...this.dbzService.characters];
